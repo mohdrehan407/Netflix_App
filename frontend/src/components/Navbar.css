@@ -1,0 +1,108 @@
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    z-index: 100;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+}
+
+.nav__black {
+    background-color: #111;
+}
+
+.nav__contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__left,
+.nav__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav__logo {
+    width: 90px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.nav__links {
+    display: flex;
+    gap: 20px;
+    color: #e5e5e5;
+    font-size: 14px;
+}
+
+.nav__links span {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav__links span:hover {
+    color: #b3b3b3;
+}
+
+.nav__avatar {
+    width: 32px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Expanding Search Bar */
+.nav__search {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 5px;
+    transition: width 0.3s, border 0.3s, background 0.3s;
+    width: 34px;
+    overflow: hidden;
+}
+
+.nav__search.active {
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid white;
+    width: 250px;
+}
+
+.nav__search button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__search input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    margin-left: 10px;
+    width: 100%;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav__search.active input {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .nav__links {
+        display: none;
+    }
+}

@@ -1,0 +1,141 @@
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    overflow-y: auto;
+}
+
+.modal__content {
+    background-color: #181818;
+    width: 90%;
+    max-width: 850px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    animation: modalIn 0.3s ease-out;
+}
+
+@keyframes modalIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #181818;
+    color: white;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.modal__banner {
+    height: 480px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.modal__bannerFade {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #181818, transparent 40%);
+}
+
+.modal__bannerTitle {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 90%;
+}
+
+.modal__bannerTitle h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.modal__info {
+    padding: 20px 40px 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.modal__meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.modal__match {
+    color: #46d369;
+}
+
+.modal__rating {
+    border: 1px solid #808080;
+    padding: 0 5px;
+    font-size: 0.7rem;
+}
+
+.modal__overview {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.modal__infoRight p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.modal__infoRight p span {
+    color: #777;
+}
+
+.modal__loader {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .modal__info {
+        grid-template-columns: 1fr;
+    }
+
+    .modal__banner {
+        height: 300px;
+    }
+
+    .modal__bannerTitle h1 {
+        font-size: 1.5rem;
+    }
+}
